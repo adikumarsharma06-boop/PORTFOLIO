@@ -1,0 +1,6 @@
+{
+  "name": "Aditya Sharma Portfolio",
+  "description": "Aditya Sharma is a student and content creator exploring video editing, graphic design, AI, technology, and building useful digital tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

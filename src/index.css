@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-main-bg: #080808;
+    --color-section-bg: #101010;
+    --color-card-bg: #161616;
+    --color-text-primary: #F2F0EA;
+    --color-text-secondary: #969696;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #080808;
+    color: #F2F0EA;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.03em;
+    color: #F2F0EA;
+  }
+
+  p {
+    color: #969696;
+  }
+}
+
+/* Cinematic Background Gradients and Effects */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.glow-blue {
+  box-shadow: 0 0 40px -10px rgba(56, 189, 248, 0.35);
+}
+
+.glow-violet {
+  box-shadow: 0 0 40px -10px rgba(168, 85, 247, 0.35);
+}
+
+.glow-ring {
+  box-shadow: 0 0 60px 10px rgba(56, 189, 248, 0.3), inset 0 0 35px rgba(168, 85, 247, 0.25);
+}
+
+/* Energy Flow Beam Animations */
+@keyframes flow-line-horizontal {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes energy-drop-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+.animate-flow-beam {
+  animation: flow-line-horizontal 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-flow-beam-slow {
+  animation: flow-line-horizontal 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-energy-drop {
+  animation: energy-drop-down 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-energy-drop-delayed {
+  animation: energy-drop-down 2.4s cubic-bezier(0.4, 0, 0.2, 1) 1.2s infinite;
+}
+
+/* Theme utility classes */
+.bg-main-bg {
+  background-color: #080808;
+}
+
+.bg-section-bg {
+  background-color: #101010;
+}
+
+.bg-card-bg {
+  background-color: #161616;
+}
+
+.text-primary-text {
+  color: #F2F0EA;
+}
+
+.text-secondary-text {
+  color: #969696;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.03);
+  }
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse 4s ease-in-out infinite;
+}
